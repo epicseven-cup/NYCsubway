@@ -1,0 +1,23 @@
+{
+  "name": "nycsubway",
+  "version": "1.0.0",
+  "description": "find the quickest path form one subway station from another.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/epicseven-cup/NYCsubway.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/epicseven-cup/NYCsubway/issues"
+  },
+  "homepage": "https://github.com/epicseven-cup/NYCsubway#readme",
+  "devDependencies": {
+    "electron": "^13.1.2"
+  }
+}
