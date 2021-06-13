@@ -1,18 +1,55 @@
-const { app, BrowserWindow } = require('electron'); //require electron npm
-
-function createWindow () { //creating window for the app
-  const win = new BrowserWindow({
-    width: 800,
-    height: 600
-  });
-
-  win.loadFile('index.html') //loading index.html
-}
-
-app.whenReady().then(() => { //when the app is ready
-  createWindow(); //open a window for the app
-});
-
-app.on('window-all-closed', function () {
-  if (process.platform !== 'darwin') app.quit(); //quite when the user close all windows
-});
+// const electron = require('electron');
+// const app = electron.app;
+// const BrowserWindow = electron.BrowserWindow;
+// // electron.crashReporter.start();
+//
+// var mainWindow = null;
+//
+//
+//
+// app.on('window-all-closed', function() {
+//     //if (process.platform != 'darwin') {
+//     app.quit();
+//     //}
+// });
+//
+// app.on('ready', function() {
+//     // call python?
+//     var subpy = require('child_process').spawn('python', ['./hello.py']);
+//     //var subpy = require('child_process').spawn('./dist/hello.exe');
+//     var rq = require('request-promise');
+//     var mainAddr = 'http://localhost:5000';
+//
+//     var openWindow = function(){
+//         mainWindow = new BrowserWindow({width: 800, height: 600});
+//         // mainWindow.loadURL('file://' + __dirname + '/index.html');
+//         // mainWindow.loadFile(index.html);
+//
+//
+//         mainWindow.loadURL('http://localhost:5000'); // =only load this url when I'm finished with
+//                                                         // inputting datas
+//         mainWindow.webContents.openDevTools(); //open the open dev tool
+//         mainWindow.on('closed', function() {
+//             mainWindow = null;
+//             subpy.kill('SIGINT');
+//         });
+//     };
+//
+//     var startUp = function(){
+//         // setTimeout(); // need to set a timeout
+//         rq(mainAddr)
+//             .then(function(htmlString){
+//                 console.log('server started!');
+//                 openWindow();
+//             })
+//             .catch(function(err){
+//                 // console.log('waiting for the server start...');
+//                 startUp(); //keep recalling the function when it crash so you might have
+//                 console.log("Looks like we encounter some error") //a lot of usless tabs
+//                 // console.log(err)
+//             });
+//     };
+//
+//     // fire!
+//     startUp();
+// });
